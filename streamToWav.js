@@ -57,7 +57,7 @@ const flattenArray = (channelBuffer, recordingLength) => {
       view.setUint32(40, flatBuffer.length * 2, true);
       
       // write the PCM samples
-      const index = 44;
+      let index = 44;
       const volume = 1;
       for (let i = 0; i < flatBuffer.length; i++) {
         view.setInt16(index, flatBuffer[i] * (0x7fff * volume), true);
