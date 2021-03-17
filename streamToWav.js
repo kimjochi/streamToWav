@@ -64,7 +64,8 @@ const flattenArray = (channelBuffer, recordingLength) => {
         index += 2;
       }
       
-      const blob = new Blob([view], { type: "audio/wav" });
+      
+      //const blob = new Blob([view], { type: "audio/wav" });
       
       // play audio
       //   const url = window.URL.createObjectURL(blob);
@@ -72,13 +73,13 @@ const flattenArray = (channelBuffer, recordingLength) => {
       //   audio.play();
       
       // file download
-      const file = new File([blob], "audio.wav");
-      const fileURL = URL.createObjectURL(file);
-      const a = document.createElement("a");
-      a.href = fileURL;
-      a.download = `audio_${+new Date()}.wav`;
-      a.style.display = "none";
-      a.click();
+//       const file = new File([blob], "audio.wav");
+//       const fileURL = URL.createObjectURL(file);
+//       const a = document.createElement("a");
+//       a.href = fileURL;
+//       a.download = `audio_${+new Date()}.wav`;
+//       a.style.display = "none";
+//       a.click();
     });
   },
   (error) => {
